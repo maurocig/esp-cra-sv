@@ -67,15 +67,15 @@
 		<div class="font-light">
 			<div class="ml-2 mt-2 flex items-center gap-2">
 				<Calendar size={16} strokeWidth={2.5} />
-				<span class="">{date}</span>
+				<span class="capitalize">{date}</span>
 			</div>
 			<div class="ml-2 hidden items-center gap-2 xl:flex">
 				<Clock size={16} strokeWidth={2.5} />
-				<span class="">{time}</span>
+				<span class="">{time} hs.</span>
 			</div>
 			<div class="ml-2 hidden items-center gap-2 xl:flex">
 				<Ticket size={16} strokeWidth={2.5} />
-				<span class="">{price}</span>
+				<span class="">${price}</span>
 			</div>
 		</div>
 	</div>

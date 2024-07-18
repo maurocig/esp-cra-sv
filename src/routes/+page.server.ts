@@ -1,4 +1,4 @@
-let events = [
+let events2 = [
 	{
 		label: 'Lucía Severino',
 		img: 'images/lucia-severino.jpg',
@@ -62,6 +62,37 @@ let activities = [
 ];
 
 export async function load() {
+	const response = await fetch(
+		'https://strapi-production-72b9.up.railway.app/api/eventos?populate=*',
+		{
+			method: 'GET',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		}
+	);
+
+	const json = await response.json();
+	console.log(json);
+
+	const events = json.data.map((event: any) => {
+		const date = new Date(event.attributes.Fecha).toLocaleDateString('es-uy', {
+			weekday: 'long',
+			month: 'long',
+			day: 'numeric'
+		});
+
+		return {
+			label: event.attributes.Titulo,
+			img: event.attributes.Imagen.data?.attributes.url || '',
+			href: `events/${event.id}`,
+			date,
+			time: event.attributes.Horario.slice(0, 5),
+			price: event.attributes.Precio,
+			description: event.attributes.Descripcion
+		};
+	});
+
 	return {
 		events,
 		activities
