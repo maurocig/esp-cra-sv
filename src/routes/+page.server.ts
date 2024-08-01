@@ -25,8 +25,7 @@ let events2 = [
 		time: '16:00 Hs',
 		price: 'Entrada Libre',
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-	},
-	{}
+	}
 ];
 
 let activities = [
