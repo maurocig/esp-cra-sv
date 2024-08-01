@@ -10,14 +10,7 @@
 		icon?: ComponentType<Icon>;
 	};
 
-	export let links: Link[] = [
-		{ name: 'Inicio', href: '/', icon: HomeIcon },
-		// { name: 'Eventos', href: '/eventos', icon: '' },
-		// { name: 'Talleres', href: '/talleres' },
-		// { name: 'El Espacio', href: '/espacio' },
-		{ name: 'Nosotros', href: '/nosotros', icon: InfoIcon },
-		{ name: 'Contacto', href: '/contacto', icon: Mail }
-	];
+	export let links: Link[] = [];
 
 	// export let links = [{ name: 'Inicio', href: '/', icon: HomeIcon }];
 </script>
@@ -36,7 +29,7 @@
 			Espacio
 		</div>
 		<img
-			src="images/logo.png"
+			src="/images/logo.png"
 			alt="logo"
 			class="h-[50px] object-contain object-left drop-shadow-md"
 		/>

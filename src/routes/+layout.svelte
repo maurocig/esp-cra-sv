@@ -12,7 +12,7 @@
 	links={[
 		{ name: 'Inicio', href: '/' },
 		{ name: 'Eventos', href: '/eventos' },
-		{ name: 'Talleres', href: '/talleres' },
+		{ name: 'Actividades', href: '/actividades' },
 		{ name: 'El Espacio', href: '/espacio' },
 		{ name: 'Nosotros', href: '/nosotros' },
 		{ name: 'Contacto', href: '/contacto' }
@@ -24,7 +24,7 @@
 		links={[
 			{ name: 'Inicio', href: '/', icon: HomeIcon },
 			{ name: 'Eventos', href: '/eventos', icon: Ticket },
-			{ name: 'Talleres', href: '/talleres', icon: Palette },
+			{ name: 'Actividades', href: '/actividades', icon: Palette },
 			{ name: 'El Espacio', href: '/espacio', icon: Building },
 			{ name: 'Nosotros', href: '/nosotros', icon: InfoIcon },
 			{ name: 'Contacto', href: '/contacto', icon: Mail }

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { Event } from '$lib/types';
 	import { cn } from '$lib/utils';
 	import { Calendar, Clock, Ticket } from 'lucide-svelte';
 
@@ -6,22 +7,13 @@
 		enum: 'start' | 'end';
 	};
 
-	type Event = {
-		label: string;
-		img: string;
-		href: string;
-		date: string;
-		time: string;
-		price: string;
-		description: string;
-	};
-
 	const {
 		data = {},
 		imageClass = '',
 		parentClass = '',
 		overlayClass = '',
-		vertical = false
+		vertical = false,
+		color = 'red'
 	} = $props();
 
 	const { label, img, href, date, time, price, description } = data as Event;
@@ -56,6 +48,7 @@
 	<div
 		class={cn(
 			'order-2 flex h-[50%] w-full flex-col justify-between rounded-bl-md rounded-br-md p-4 shadow-sm backdrop-blur-lg transition duration-700 group-hover:shadow-md md:order-none md:h-full md:w-[50%] lg:p-6',
+			`bg-${color}-400`,
 			overlayClass,
 			vertical && 'md:h-[50%] md:w-full'
 		)}
@@ -75,7 +68,11 @@
 			</div>
 			<div class="ml-2 hidden items-center gap-2 xl:flex">
 				<Ticket size={16} strokeWidth={2.5} />
-				<span class="">${price}</span>
+				{#if price === 0}
+					<span>Entrada libre</span>
+				{:else}
+					<span class="">${price}</span>
+				{/if}
 			</div>
 		</div>
 	</div>

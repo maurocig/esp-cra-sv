@@ -72,7 +72,6 @@ export async function load() {
 	);
 
 	const json = await response.json();
-	console.log(json);
 
 	const events = json.data.map((event: any) => {
 		const date = new Date(event.attributes.Fecha).toLocaleDateString('es-uy', {
@@ -87,7 +86,7 @@ export async function load() {
 			href: `events/${event.id}`,
 			date,
 			time: event.attributes.Horario.slice(0, 5),
-			price: event.attributes.Precio,
+			price: +event.attributes.Precio,
 			description: event.attributes.Descripcion
 		};
 	});
