@@ -12,28 +12,26 @@
 		imageClass = '',
 		parentClass = '',
 		overlayClass = '',
-		vertical = false,
 		color = 'red'
 	} = $props();
 
-	const { label, img, href, date, time, price, description } = data as Event;
+	const { label, img, href, date, time, price, description, id } = data as Event;
 </script>
 
 <a
-	{href}
+	href="eventos/{id}"
 	class={cn(
-		'duration-800 group relative z-40 flex flex-col overflow-hidden rounded-md border-0 opacity-85 transition duration-700 hover:opacity-100 md:flex-row',
-		parentClass,
-		vertical && 'md:flex-col'
+		'duration-800 group relative z-40 flex h-[400px] flex-col overflow-hidden border-0 opacity-85 transition duration-700 hover:opacity-100 md:flex-col lg:h-[500px] ',
+		parentClass
 	)}
 >
 	<div
-		class="absolute left-[calc(50%-23px)] top-[2px] z-50 aspect-square w-[46px] rounded-full bg-slate-100 md:top-[-30px]"
+		class="absolute left-[calc(50%-23px)] top-0 z-50 aspect-square w-[46px] rounded-full bg-slate-100 md:top-[-35px]"
 	></div>
 	<div
 		class={cn(
-			'order-1 h-[60%] w-full overflow-hidden md:order-none md:h-full md:w-[60%]',
-			vertical && 'md:h-[60%] md:w-full',
+			'order-1 h-[60%] w-full overflow-hidden rounded-tl-md rounded-tr-md md:order-none md:h-full md:w-[60%]',
+			'md:w-full',
 			imageClass
 		)}
 	>
@@ -47,10 +45,9 @@
 	<!-- overlay -->
 	<div
 		class={cn(
-			'order-2 flex h-[50%] w-full flex-col justify-between rounded-bl-md rounded-br-md p-4 shadow-sm backdrop-blur-lg transition duration-700 group-hover:shadow-md md:order-none md:h-full md:w-[50%] lg:p-6',
+			'order-2 flex min-h-[45%] w-full flex-col rounded-bl-md rounded-br-md p-4 shadow-sm backdrop-blur-lg transition duration-700 group-hover:shadow-md md:order-none md:min-h-[40%] lg:min-h-[50%] lg:justify-between lg:p-6',
 			`bg-${color}-400`,
-			overlayClass,
-			vertical && 'md:h-[50%] md:w-full'
+			overlayClass
 		)}
 	>
 		<div>
@@ -60,9 +57,9 @@
 		<div class="font-light">
 			<div class="ml-2 mt-2 flex items-center gap-2">
 				<Calendar size={16} strokeWidth={2.5} />
-				<span class="capitalize">{date}</span>
+				<span class="text-nowrap capitalize">{date}</span>
 			</div>
-			<div class="ml-2 hidden items-center gap-2 xl:flex">
+			<div class="ml-2 hidden items-center gap-2 md:flex">
 				<Clock size={16} strokeWidth={2.5} />
 				<span class="">{time} hs.</span>
 			</div>
@@ -77,7 +74,7 @@
 		</div>
 	</div>
 	<div
-		class="absolute bottom-[-25px] left-[calc(50%-21px)] z-40 aspect-square w-[42px] rounded-full bg-slate-100 group-hover:shadow-inner md:bottom-[5px]"
+		class="absolute bottom-[-30px] left-[calc(50%-21px)] z-40 aspect-square w-[42px] rounded-full bg-slate-100 group-hover:shadow-inner md:bottom-[-10px]"
 	></div>
 	<div class="z-50 h-[38px] w-[39px] self-center bg-slate-100"></div>
 </a>

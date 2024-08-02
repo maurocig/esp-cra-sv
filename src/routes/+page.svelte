@@ -18,11 +18,12 @@
 	</div> -->
 
 	<!-- EVENTOS -->
-	<h2 class="mb-2 mt-[400px] text-[2.4rem] font-thin">Próximos eventos</h2>
-	<div class="grid w-full gap-4 lg:grid-cols-3 xl:gap-6">
-		<EventCard data={events[events.length - 1]} vertical={true} overlayClass="bg-red-400" />
-		<EventCard data={events[events.length - 2]} vertical={true} overlayClass="bg-yellow-300" />
-		<EventCard data={events[events.length - 3]} vertical={true} overlayClass="bg-green-400" />
+	<h2 class="mt-[350px] text-[2.4rem] font-thin md:mb-2 md:mt-[400px]">Próximos eventos</h2>
+
+	<div class="grid w-full md:gap-4 lg:grid-cols-3 xl:gap-6">
+		<EventCard data={events[events.length - 1]} overlayClass="bg-red-400" />
+		<EventCard data={events[events.length - 2]} overlayClass="bg-yellow-300" />
+		<EventCard data={events[events.length - 3]} overlayClass="bg-green-400" />
 	</div>
 	<a
 		href="/eventos"
@@ -33,11 +34,9 @@
 	<!-- ACTIVIDADES -->
 	<h2 class="mb-2 text-[2.4rem] font-thin">Talleres y actividades</h2>
 	<div class="grid w-full gap-4 lg:grid-cols-3 xl:gap-6">
-		<ActivityCard data={activities[0]} vertical={true} />
-
-		<ActivityCard data={activities[1]} vertical={true} />
-
-		<ActivityCard data={activities[2]} vertical={true} />
+		<ActivityCard data={activities[0]} />
+		<ActivityCard data={activities[1]} />
+		<ActivityCard data={activities[2]} />
 	</div>
 	<a
 		href="/eventos"

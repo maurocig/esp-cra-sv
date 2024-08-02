@@ -31,7 +31,7 @@
 		]}
 	/>
 	<main
-		class="mx-auto mt-[45px] h-full min-h-[100vw-70px] w-full px-4 py-10 md:ml-[250px] md:mt-0 md:min-h-full md:w-[calc(100vw-250px)] md:p-6 xl:mr-[250px]"
+		class="mx-auto mt-[45px] h-full min-h-[100vw-70px] w-full px-4 py-10 md:ml-[250px] md:mt-0 md:min-h-full md:w-[calc(100vw-250px)] xl:mr-[250px] xl:p-6"
 	>
 		<div class="mx-auto w-full max-w-7xl">
 			{@render children()}

@@ -31,18 +31,11 @@
 <a
 	{href}
 	class={cn(
-		'duration-800 group relative z-40 flex min-h-[400px] flex-col overflow-hidden rounded-md border-0 opacity-85 transition duration-700 hover:opacity-100 md:flex-row',
-		parentClass,
-		vertical && 'md:flex-col'
+		'duration-800 group relative z-30 flex min-h-[400px] flex-col overflow-hidden rounded-md border-0 opacity-85 transition duration-700 hover:opacity-100 md:flex-row',
+		parentClass
 	)}
 >
-	<div
-		class={cn(
-			'order-1 h-[60%] w-full overflow-hidden md:order-none md:h-full md:w-[60%]',
-			vertical && 'md:h-[60%] md:w-full',
-			imageClass
-		)}
-	>
+	<div class={cn('h-[60%] w-full overflow-hidden md:h-full ', imageClass)}>
 		<img
 			src={img}
 			alt="Evento 2"
@@ -53,13 +46,12 @@
 	<!-- overlay -->
 	<div
 		class={cn(
-			'absolute bottom-0 flex h-[50%] w-full flex-col justify-between overflow-hidden rounded-bl-md rounded-br-md bg-gradient-to-t from-white/60 to-white/30 p-4 shadow-sm backdrop-blur-md transition duration-700 group-hover:shadow-md lg:p-6',
-			overlayClass,
-			vertical && 'md:h-[35%] md:w-full'
+			'absolute bottom-0 flex min-h-[40%] w-full flex-col justify-between bg-gradient-to-t from-white/60 to-white/30 p-4 shadow-sm backdrop-blur-md transition duration-700 group-hover:shadow-md md:h-[35%] md:w-full lg:p-6',
+			overlayClass
 		)}
 	>
 		<div>
-			<span class="text-lg font-normal md:text-2xl xl:text-4xl">{label}</span>
+			<span class="text-2xl font-normal xl:text-4xl">{label}</span>
 			<!-- <p class="mb-4 mt-2">{description}</p> -->
 		</div>
 		<div class="font-light">
@@ -67,7 +59,7 @@
 				<Calendar size={16} strokeWidth={2.5} />
 				<span class="">{day}</span>
 			</div>
-			<div class="ml-2 hidden items-center gap-2 xl:flex">
+			<div class="ml-2 flex items-center gap-2">
 				<Clock size={16} strokeWidth={2.5} />
 				<span class="">{time}</span>
 			</div>
