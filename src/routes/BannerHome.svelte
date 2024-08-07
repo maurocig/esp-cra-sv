@@ -1,8 +1,18 @@
 <script>
-	import { ChevronRight } from 'lucide-svelte';
+	import { ChevronRight, Settings } from 'lucide-svelte';
 </script>
 
-<div class="absolute left-0 top-0 h-[400px] w-full overflow-hidden shadow-md md:left-[250px]">
+<div
+	class="absolute left-0 top-0 h-[400px] w-full max-w-[calc(100vw-250px)] overflow-hidden shadow-md md:left-[250px]"
+>
+	<a
+		class="absolute right-5 top-5 z-50 h-[30px] w-[30px] text-white opacity-0 transition hover:opacity-50"
+		href="https://strapi-production-c8d7.up.railway.app/admin/"
+		target="_blank"
+	>
+		<Settings />
+	</a>
+
 	<img
 		src="images/interior-cartel.jpg"
 		alt="Hall de Espacio CRA"
