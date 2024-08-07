@@ -12,7 +12,8 @@
 		imageClass = '',
 		parentClass = '',
 		overlayClass = '',
-		color = 'red'
+		color = 'red',
+		style = ''
 	} = $props();
 
 	const { label, img, href, date, time, price, description, id } = data as Event;
@@ -29,6 +30,7 @@
 		class="absolute left-[calc(50%-23px)] top-0 z-50 aspect-square w-[46px] rounded-full bg-slate-100 md:top-[-35px]"
 	></div>
 	<div
+		{style}
 		class={cn(
 			'order-1 h-[60%] w-full overflow-hidden rounded-tl-md rounded-tr-md md:order-none md:h-full md:w-[60%]',
 			'md:w-full',
@@ -46,9 +48,9 @@
 	<div
 		class={cn(
 			'order-2 flex min-h-[45%] w-full flex-col rounded-bl-md rounded-br-md p-4 shadow-sm backdrop-blur-lg transition duration-700 group-hover:shadow-md md:order-none md:min-h-[40%] lg:min-h-[50%] lg:justify-between lg:p-6',
-			`bg-${color}-400`,
 			overlayClass
 		)}
+		{style}
 	>
 		<div>
 			<span class="text-3xl font-normal md:text-2xl xl:text-4xl">{label}</span>
@@ -78,3 +80,15 @@
 	></div>
 	<div class="z-50 h-[38px] w-[39px] self-center bg-slate-100"></div>
 </a>
+
+<style>
+	.red {
+		background-color: red;
+	}
+	.blue {
+		background-color: blue;
+	}
+	.green {
+		background-color: green;
+	}
+</style>

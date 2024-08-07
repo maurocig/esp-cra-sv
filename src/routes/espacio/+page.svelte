@@ -16,11 +16,11 @@
 			>
 				<h2 class="text-2xl font-light">¿Qué es?</h2>
 				<p class="flex h-full items-center">
-					Este ESPACIO DE CREATIVIDAD Y ARTE nace con la vocación de ofrecer un lugar donde
-					encontrarse y disfrutar de propuestas y actividades relacionadas con el entretenimiento y
-					la cultura. Desde talleres y clases semanales de diferentes disciplinas artísticas, hasta
-					actividades y espectáculos puntuales: obras de teatro, cine-forum, toques, recitales,
-					milongas y exposiciones.
+					Este ESPACIO DE CREACIÓN Y ARTE nace con la vocación de ofrecer un lugar donde encontrarse
+					y disfrutar de propuestas y actividades relacionadas con el entretenimiento y la cultura.
+					Desde talleres y clases semanales de diferentes disciplinas artísticas, hasta actividades
+					y espectáculos puntuales: obras de teatro, cine-forum, toques, recitales, milongas y
+					exposiciones.
 				</p>
 			</div>
 

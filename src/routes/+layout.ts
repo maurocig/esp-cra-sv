@@ -65,7 +65,7 @@ let activities = [
 
 export async function load() {
 	const response = await fetch(
-		'https://strapi-production-72b9.up.railway.app/api/eventos?populate=*',
+		'https://strapi-production-c8d7.up.railway.app/api/eventos?populate=*',
 		{
 			method: 'GET',
 			headers: {
@@ -75,6 +75,7 @@ export async function load() {
 	);
 
 	const json = await response.json();
+	console.log(json);
 
 	const events = json.data.map((event: any) => {
 		const date = new Date(event.attributes.Fecha)
@@ -98,6 +99,7 @@ export async function load() {
 	});
 
 	return {
+		// events: events2,
 		events,
 		activities
 	};
