@@ -7,7 +7,6 @@
 	import BannerHome from './BannerHome.svelte';
 
 	const { events, activities } = $page.data;
-	console.log(events);
 </script>
 
 <div class="flex w-full flex-col">
@@ -21,9 +20,9 @@
 	<h2 class="mt-[350px] text-[2.4rem] font-thin md:mb-2 md:mt-[400px]">Próximos eventos</h2>
 
 	<div class="grid w-full md:gap-4 lg:grid-cols-3 xl:gap-6">
-		<EventCard data={events[events.length - 1]} overlayClass="bg-red-400" />
-		<EventCard data={events[events.length - 2]} overlayClass="bg-yellow-300" />
-		<EventCard data={events[events.length - 3]} overlayClass="bg-green-400" />
+		<EventCard data={events[events.length - 1]} />
+		<EventCard data={events[events.length - 2]} />
+		<EventCard data={events[events.length - 3]} />
 	</div>
 	<a
 		href="/eventos"
@@ -39,7 +38,7 @@
 		<ActivityCard data={activities[2]} />
 	</div>
 	<a
-		href="/eventos"
+		href="/actividades"
 		class="mt-[15px] flex w-full items-center justify-end gap-4 p-4 text-xl font-light text-slate-600 transition hover:opacity-85"
 		>Ver todos <ArrowRight class="" /></a
 	>

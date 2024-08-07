@@ -27,13 +27,13 @@
 			<div
 				class="relative h-auto w-[40%] grow-0 overflow-hidden rounded-lg border border-slate-900/10 object-cover shadow-md"
 			>
-				<img src="images/tambores.jpg" class="absolute h-full w-full object-cover" alt="" />
+				<img src="images/fachada.jpg" class="absolute h-full w-full object-cover" alt="" />
 			</div>
 		</div>
 
 		<div class="flex gap-4 lg:gap-8">
 			<div class="relative w-[50%] overflow-hidden rounded-lg border border-slate-900/10 shadow-md">
-				<img src="images/fachada.jpg" class="absolute h-full w-full object-cover" alt="" />
+				<img src="images/tambores.jpg" class="absolute h-full w-full object-cover" alt="" />
 			</div>
 
 			<div
@@ -66,7 +66,7 @@
 			<div
 				class="relative h-auto w-[60%] grow-0 overflow-hidden rounded-lg border border-slate-900/10 object-cover shadow-md"
 			>
-				<img src="images/fachada.jpg" class="absolute h-full w-full object-cover" alt="" />
+				<img src="images/taller-pintura.jpg" class="absolute h-full w-full object-cover" alt="" />
 			</div>
 		</div>
 	</div>

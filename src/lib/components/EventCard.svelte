@@ -7,16 +7,9 @@
 		enum: 'start' | 'end';
 	};
 
-	const {
-		data = {},
-		imageClass = '',
-		parentClass = '',
-		overlayClass = '',
-		color = 'red',
-		style = ''
-	} = $props();
+	const { data = {}, imageClass = '', parentClass = '', overlayClass = '', style = '' } = $props();
 
-	const { label, img, href, date, time, price, description, id } = data as Event;
+	const { label, img, href, date, time, price, description, id, color } = data as Event;
 </script>
 
 <a
@@ -50,7 +43,7 @@
 			'order-2 flex min-h-[45%] w-full flex-col rounded-bl-md rounded-br-md p-4 shadow-sm backdrop-blur-lg transition duration-700 group-hover:shadow-md md:order-none md:min-h-[40%] lg:min-h-[50%] lg:justify-between lg:p-6',
 			overlayClass
 		)}
-		{style}
+		style={'background-color:' + color + ';'}
 	>
 		<div>
 			<span class="text-3xl font-normal md:text-2xl xl:text-4xl">{label}</span>
@@ -82,13 +75,4 @@
 </a>
 
 <style>
-	.red {
-		background-color: red;
-	}
-	.blue {
-		background-color: blue;
-	}
-	.green {
-		background-color: green;
-	}
 </style>

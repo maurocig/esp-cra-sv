@@ -2,10 +2,14 @@
 	import { page } from '$app/stores';
 	import { Calendar, Clock, Ticket } from 'lucide-svelte';
 
+	// const { color = '#f87171' } = $props();
 	const { events } = $page.data;
-	const event = events.find((event: any) => event.id === +$page.params.id);
-	const { img, label, description, date, time, price } = event;
-	console.log(event);
+	const id = +$page.params.id;
+	const event = events.find((event: any) => event.id === id);
+	const { img, label, description, date, time, price, color } = event;
+
+	const colors = ['#f87171', '#34d399', '#fde047'];
+	// const color = colors[$page.params.id % colors.length];
 </script>
 
 <div class="flex flex-col overflow-hidden rounded-md lg:h-[400px] lg:flex-row">
@@ -19,7 +23,8 @@
 	</div>
 
 	<div
-		class="relative flex h-full w-full flex-col overflow-hidden bg-red-400 p-4 lg:order-1 lg:mt-0 lg:w-[40%] lg:justify-center lg:p-6"
+		class="relative flex h-full w-full flex-col overflow-hidden p-4 lg:order-1 lg:mt-0 lg:w-[40%] lg:justify-center lg:p-6"
+		style={'background-color:' + color + ';'}
 	>
 		<div class="">
 			<span class="text-2xl font-normal xl:text-4xl">{label}</span>

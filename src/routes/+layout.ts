@@ -63,6 +63,8 @@ let activities = [
 	}
 ];
 
+const colors = ['#818cf8', '#34d399', '#fde047', '#f87171'];
+
 export async function load() {
 	const response = await fetch(
 		'https://strapi-production-c8d7.up.railway.app/api/eventos?populate=*',
@@ -86,6 +88,7 @@ export async function load() {
 			})
 			.replace(',', '');
 
+		const color = colors[event.id % colors.length];
 		return {
 			id: event.id,
 			label: event.attributes.Titulo,
@@ -94,7 +97,8 @@ export async function load() {
 			date,
 			time: event.attributes.Horario.slice(0, 5),
 			price: +event.attributes.Precio,
-			description: event.attributes.Descripcion
+			description: event.attributes.Descripcion,
+			color
 		};
 	});
 

@@ -7,4 +7,5 @@ export type Event = {
 	time: string;
 	price: number;
 	description: string;
+	color: string;
 };

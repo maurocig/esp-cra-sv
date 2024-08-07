@@ -10,6 +10,6 @@
 
 <div class="grid w-full gap-4 lg:grid-cols-3 xl:gap-6">
 	{#each events as event, index}
-		<EventCard data={event} style={'background-color: ' + colors[index % colors.length]} />
+		<EventCard data={event} />
 	{/each}
 </div>
