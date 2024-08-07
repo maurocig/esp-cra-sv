@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import { Calendar, Clock, Ticket } from 'lucide-svelte';
+	import { browser } from '$app/environment';
+	import { navigating, page } from '$app/stores';
+	import { ArrowLeft, Calendar, Clock, Ticket } from 'lucide-svelte';
 
 	// const { color = '#f87171' } = $props();
 	const { events } = $page.data;
@@ -12,9 +13,16 @@
 	// const color = colors[$page.params.id % colors.length];
 </script>
 
-<div class="flex flex-col overflow-hidden rounded-md lg:h-[400px] lg:flex-row">
+<div class="relative flex flex-col overflow-hidden rounded-md lg:h-[400px] lg:flex-row">
+	<div class="absolute left-8 top-8 z-40 transition hover:opacity-80">
+		{#if browser}
+			<a class="hover:cursor-pointer" onclick={() => window.history.back()}>
+				<ArrowLeft />
+			</a>
+		{/if}
+	</div>
 	<div
-		class="overlay-hidden mx-auto h-[200px] w-full rounded-md bg-green-500 md:h-[400px] lg:order-2 lg:h-full lg:w-[60%]"
+		class="overlay-hidden relative mx-auto h-[200px] w-full rounded-md bg-green-500 md:h-[400px] lg:order-2 lg:h-full lg:w-[60%]"
 	>
 		<img src={img} alt="" class="h-full w-full object-cover object-center" />
 		<!-- <div

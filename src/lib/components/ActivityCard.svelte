@@ -15,6 +15,7 @@
 		time: string;
 		price: string;
 		description: string;
+		id: number;
 	};
 
 	const {
@@ -25,11 +26,11 @@
 		vertical = false
 	} = $props();
 
-	const { label, img, href, date, day, time, price, description } = data as Activity;
+	const { label, img, href, date, day, time, price, description, id } = data as Activity;
 </script>
 
 <a
-	{href}
+	href="/actividades/{id}"
 	class={cn(
 		'duration-800 group relative z-30 flex min-h-[400px] flex-col overflow-hidden rounded-md border-0 opacity-85 transition duration-700 hover:opacity-100 md:flex-row',
 		parentClass

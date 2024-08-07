@@ -2,7 +2,7 @@
 	import BannerPages from '$lib/components/BannerPages.svelte';
 </script>
 
-<BannerPages img="images/interior-cartel.jpg">
+<BannerPages img="images/fogata-san-juan.jpg">
 	<!-- <h1 class="">El espacio</h1> -->
 </BannerPages>
 

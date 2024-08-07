@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="absolute left-0 top-0 h-[400px] w-full max-w-[calc(100vw-250px)] overflow-hidden shadow-md md:left-[250px]"
+	class="absolute left-0 top-0 h-[400px] w-full min-w-[100vw] max-w-[calc(100vw-250px)] overflow-hidden shadow-md md:left-[250px] md:min-w-0"
 >
 	<a
 		class="absolute right-5 top-5 z-50 h-[30px] w-[30px] text-white opacity-0 transition hover:opacity-50"
@@ -21,7 +21,7 @@
 	<div
 		class="absolute bottom-0 flex h-[40%] w-full flex-col items-end justify-center bg-gradient-to-r from-white/60 to-orange-200/30 p-6 shadow-md backdrop-blur md:left-0 lg:h-full lg:w-[38%] lg:p-8 xl:w-[30%]"
 	>
-		<span class="mb-4 w-full text-3xl font-semibold text-slate-800 drop-shadow-lg lg:text-4xl"
+		<span class="mb-4 w-full text-2xl font-semibold text-slate-800 drop-shadow-lg lg:text-4xl"
 			>El Centro cultural de <br class="hidden lg:block" /> La Floresta</span
 		>
 		<a href="/espacio" class="flex w-full items-center gap-2 text-xl transition hover:opacity-75"

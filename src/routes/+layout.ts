@@ -32,7 +32,7 @@ let activities = [
 	{
 		id: 1,
 		label: 'Teatro',
-		img: 'images/teatro.jpg',
+		img: '/images/teatro.jpg',
 		href: '/actividades/teatro',
 		day: 'Miércoles',
 		time: '20:00 Hs',
@@ -42,7 +42,7 @@ let activities = [
 	{
 		id: 2,
 		label: 'Yoga integral',
-		img: 'images/yoga.jpg',
+		img: '/images/yoga.jpg',
 		href: '/actividades/yoga',
 		day: 'Miércoles y Viernes',
 		time: '9:45 Hs',
@@ -53,7 +53,7 @@ let activities = [
 	{
 		id: 3,
 		label: 'Karate do Shokotan',
-		img: 'images/karate.avif',
+		img: '/images/karate.avif',
 		href: '/actividades/karate',
 		day: 'Martes y Jueves',
 		time: '20:00 Hs',
