@@ -19,7 +19,7 @@
 		class="h-full w-full object-cover object-center lg:h-full"
 	/>
 	<div
-		class="absolute bottom-0 flex h-[40%] w-full flex-col items-end justify-center bg-gradient-to-r from-white/60 to-orange-200/30 p-6 shadow-md backdrop-blur md:left-0 lg:h-full lg:w-[38%] lg:p-8 xl:w-[30%]"
+		class="absolute bottom-0 flex h-[40%] w-full flex-col items-end justify-center bg-gradient-to-r from-white/60 to-orange-200/30 p-6 shadow-md backdrop-blur md:left-0 lg:h-full lg:w-[50%] lg:p-8 xl:w-[40%]"
 	>
 		<span class="mb-4 w-full text-2xl font-semibold text-slate-800 drop-shadow-lg lg:text-4xl"
 			>El Centro cultural de <br class="hidden lg:block" /> La Floresta</span
