@@ -2,6 +2,7 @@
 	import ContactInfo from '$lib/components/ContactInfo.svelte';
 	import { onMount } from 'svelte';
 	import ContactForm from './ContactForm.svelte';
+	import ContactForm2 from './ContactForm2.svelte';
 	import GoogleMap from './GoogleMap.svelte';
 
 	export let data;
@@ -19,7 +20,8 @@
 	<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
 		<div class="space-y-4">
 			<h1 class="text-2xl font-semibold">Dejanos tu consulta</h1>
-			<ContactForm data={data.contactForm} />
+			<!-- <ContactForm data={data.contactForm} /> -->
+			<ContactForm2 />
 		</div>
 		<div class="space-y-4" bind:clientWidth={width}>
 			<h1 class="text-2xl font-semibold">Mapa</h1>
