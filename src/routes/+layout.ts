@@ -1,33 +1,3 @@
-let events2 = [
-	{
-		label: 'Lucía Severino',
-		img: 'images/lucia-severino.jpg',
-		href: 'events/lucia-severino',
-		date: '12 de Octubre',
-		time: '20:00 Hs',
-		price: '$600',
-		description: 'Presenta su nuevo disco Presente Continuo.'
-	},
-	{
-		label: 'Jaime Clara',
-		img: 'images/jaime-clara.jpg',
-		href: 'events/jaime-clara',
-		date: '3 de Noviembre',
-		time: '16:00 Hs',
-		price: 'Entrada Libre',
-		description: 'Presentando el libro "En la Larga Noche".'
-	},
-	{
-		label: 'Estatuas vivientes',
-		img: 'images/estatuas.jpg',
-		href: 'events/estatuas-vivientes',
-		date: '3 de Noviembre',
-		time: '16:00 Hs',
-		price: 'Entrada Libre',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-	}
-];
-
 let activities = [
 	{
 		id: 1,
@@ -93,7 +63,7 @@ export async function load() {
 			id: event.id,
 			label: event.attributes.Titulo,
 			img: event.attributes.Imagen.data?.attributes.url || '',
-			href: `events/${event.id}`,
+			href: `eventos/${event.id}`,
 			date,
 			time: event.attributes.Horario.slice(0, 5),
 			price: +event.attributes.Precio,
@@ -102,6 +72,40 @@ export async function load() {
 		};
 	});
 
+	const response2 = await fetch(
+		'https://strapi-production-c8d7.up.railway.app/api/actividades?populate=*',
+		{
+			method: 'GET',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		}
+	);
+
+	const json2 = await response2.json();
+	console.log(json2);
+
+	const activities = json2.data.map((activity: any) => {
+		const date = new Date(activity.attributes.Fecha)
+			.toLocaleDateString('es-uy', {
+				weekday: 'long',
+				month: 'long',
+				day: 'numeric'
+			})
+			.replace(',', '');
+
+		return {
+			id: activity.id,
+			label: activity.attributes.Titulo,
+			img: activity.attributes.Imagen.data?.attributes.url || '',
+			href: `actividades/${activity.id}`,
+			day: activity.attributes.Dia,
+			date,
+			time: activity.attributes.Horario.slice(0, 5),
+			price: +activity.attributes.Precio,
+			description: activity.attributes.Descripcion
+		};
+	});
 	return {
 		// events: events2,
 		events,
