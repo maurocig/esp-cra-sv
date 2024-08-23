@@ -85,30 +85,32 @@ export async function load() {
 	const json2 = await response2.json();
 	console.log(json2);
 
-	const activities = json2.data.map((activity: any) => {
-		const date = new Date(activity.attributes.Fecha)
-			.toLocaleDateString('es-uy', {
-				weekday: 'long',
-				month: 'long',
-				day: 'numeric'
-			})
-			.replace(',', '');
+	if (json2.data) {
+		const activities = json2.data.map((activity: any) => {
+			const date = new Date(activity.attributes.Fecha)
+				.toLocaleDateString('es-uy', {
+					weekday: 'long',
+					month: 'long',
+					day: 'numeric'
+				})
+				.replace(',', '');
 
-		return {
-			id: activity.id,
-			label: activity.attributes.Titulo,
-			img: activity.attributes.Imagen.data?.attributes.url || '',
-			href: `actividades/${activity.id}`,
-			day: activity.attributes.Dia,
-			date,
-			time: activity.attributes.Horario.slice(0, 5) || null,
-			price: +activity.attributes.Precio,
-			description: activity.attributes.Descripcion
-		};
-	});
+			return {
+				id: activity.id,
+				label: activity.attributes.Titulo,
+				img: activity.attributes.Imagen.data?.attributes.url || '',
+				href: `actividades/${activity.id}`,
+				day: activity.attributes.Dia,
+				date,
+				time: activity.attributes.Horario.slice(0, 5) || null,
+				price: +activity.attributes.Precio,
+				description: activity.attributes.Descripcion
+			};
+		});
+	}
 	return {
 		// events: events2,
 		events,
-		activities
+		activities: activities || []
 	};
 }
