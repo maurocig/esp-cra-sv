@@ -3,7 +3,7 @@
 
 	let status = '';
 	const handleSubmit = async (data: any) => {
-		status = 'Submitting...';
+		status = 'Enviando...';
 		const formData = new FormData(data.currentTarget);
 		const object = Object.fromEntries(formData);
 		const json = JSON.stringify(object);
@@ -19,7 +19,8 @@
 		const result = await response.json();
 		if (result.success) {
 			console.log(result);
-			status = result.message || 'Success';
+			// status = result.message || 'Success';
+			status = 'El Formulario fue enviado con éxito. Gracias por contactarnos.';
 		}
 	};
 </script>
@@ -50,8 +51,9 @@
 			rows="3"
 			class="w-full rounded-md border border-slate-900/10 p-4"
 		></textarea>
-		<Button type="submit" class="rounded-md bg-emerald-600 px-8 py-4 text-white">Enviar</Button>
+		<div class="flex items-center gap-4">
+			<Button type="submit" class="rounded-md bg-emerald-600 px-8 py-4 text-white">Enviar</Button>
+			<div class="text-lg font-semibold tracking-wide text-emerald-600">{status}</div>
+		</div>
 	</form>
 </div>
-
-<div>{status}</div>

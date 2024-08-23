@@ -101,7 +101,7 @@ export async function load() {
 			href: `actividades/${activity.id}`,
 			day: activity.attributes.Dia,
 			date,
-			time: activity.attributes.Horario.slice(0, 5),
+			time: activity.attributes.Horario.slice(0, 5) || null,
 			price: +activity.attributes.Precio,
 			description: activity.attributes.Descripcion
 		};

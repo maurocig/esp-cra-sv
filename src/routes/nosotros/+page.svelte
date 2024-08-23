@@ -9,11 +9,13 @@
 <div class="mt-[400px]">
 	<h1 class="mb-4 text-[2.4rem] font-thin">Nosotros</h1>
 
-	<div class="grid w-full gap-4 text-lg font-light tracking-wide md:grid-cols-2 lg:gap-8">
-		<div class="h-[300px] w-full overflow-hidden rounded-lg">
+	<div class="grid w-full gap-4 text-lg font-light tracking-wide lg:grid-cols-2 lg:gap-8">
+		<div class="h-full w-full overflow-hidden rounded-lg">
 			<img src="/images/staff.jpg" alt="" class="h-full w-full object-cover" />
 		</div>
-		<div class="flex flex-col gap-2 rounded-lg border-slate-900/10 bg-white p-4 shadow-md md:p-6">
+		<div
+			class="flex h-full flex-col justify-center gap-4 rounded-lg border-slate-900/10 bg-white p-4 shadow-md md:p-6"
+		>
 			<h2 class="text-2xl font-light">CRA Productora</h2>
 			<p>
 				Susana Asuaga y Alicia Escardó gestionan la productora cultural CRA desde hace diez años.
@@ -27,7 +29,7 @@
 		</div>
 	</div>
 
-	<div class="mt-4 grid h-[300px] w-full gap-4 md:mt-6 md:grid-cols-3 md:gap-6">
+	<div class="mt-4 grid min-h-[300px] w-full gap-4 md:mt-6 md:grid-cols-3 md:gap-6">
 		<div class="h-full w-full overflow-hidden rounded-lg">
 			<img src="/images/proyector-colores.jpg" alt="" class="h-full w-full object-cover" />
 		</div>

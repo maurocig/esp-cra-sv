@@ -52,12 +52,12 @@
 		)}
 	>
 		<div>
-			<span class="text-2xl font-normal xl:text-4xl">{label}</span>
+			<span class="text-2xl font-semibold xl:text-4xl">{label}</span>
 			<!-- <p class="mb-4 mt-2">{description}</p> -->
 		</div>
 		<div class="font-light">
 			{#if showDescription}
-				<div class="ml-2 mt-2 hidden items-center gap-2 lg:flex">
+				<div class="ml-2 mt-2 hidden items-center gap-2 text-lg font-normal lg:flex">
 					{description}
 				</div>
 			{/if}

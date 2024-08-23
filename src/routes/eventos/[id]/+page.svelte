@@ -14,10 +14,12 @@
 </script>
 
 <div class="relative flex flex-col overflow-hidden rounded-md lg:h-[400px] lg:flex-row">
-	<div class="absolute left-8 top-8 z-40 transition hover:opacity-80">
+	<div
+		class="absolute left-8 top-8 z-40 text-white/90 transition hover:opacity-80 lg:text-slate-900/90"
+	>
 		{#if browser}
 			<a class="hover:cursor-pointer" onclick={() => window.history.back()}>
-				<ArrowLeft />
+				<ArrowLeft class="drop-shadow-md" />
 			</a>
 		{/if}
 	</div>
