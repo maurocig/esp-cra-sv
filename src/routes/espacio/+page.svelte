@@ -9,13 +9,13 @@
 <div class="mt-[400px]">
 	<h1 class="mb-4 text-[2.4rem] font-thin">El Espacio</h1>
 
-	<div class="grid w-full gap-4 text-lg font-light tracking-wide lg:gap-8">
-		<div class="flex gap-4 lg:gap-8">
+	<div class="grid w-full grid-cols-1 gap-4 text-lg font-light tracking-wide lg:gap-8">
+		<div class="flex h-fit flex-col gap-4 lg:flex-row lg:gap-8">
 			<div
-				class="h-fit w-[60%] space-y-4 rounded-lg border border-slate-900/10 bg-white p-4 shadow-sm md:p-8"
+				class="h-fit w-full space-y-4 rounded-lg border border-slate-900/10 bg-white p-4 shadow-sm md:p-8 lg:w-[60%]"
 			>
 				<h2 class="text-2xl font-light">¿Qué es?</h2>
-				<p class="flex h-full items-center">
+				<p class="flex h-full w-full items-center">
 					Este ESPACIO DE CREACIÓN Y ARTE nace con la vocación de ofrecer un lugar donde encontrarse
 					y disfrutar de propuestas y actividades relacionadas con el entretenimiento y la cultura.
 					Desde talleres y clases semanales de diferentes disciplinas artísticas, hasta actividades
@@ -25,19 +25,22 @@
 			</div>
 
 			<div
-				class="relative h-auto w-[40%] grow-0 overflow-hidden rounded-lg border border-slate-900/10 object-cover shadow-md"
+				class="relative h-auto min-h-[300px] w-full overflow-hidden rounded-lg border border-slate-900/10 object-cover shadow-md md:grow-0 lg:min-h-0 lg:w-[40%]"
 			>
-				<img src="images/fachada.jpg" class="absolute h-full w-full object-cover" alt="" />
+				<img src="images/pinceles.jpeg" class="absolute h-full w-full object-cover" alt="" />
 			</div>
 		</div>
 
-		<div class="flex gap-4 lg:gap-8">
-			<div class="relative w-[50%] overflow-hidden rounded-lg border border-slate-900/10 shadow-md">
-				<img src="images/tambores.jpg" class="absolute h-full w-full object-cover" alt="" />
+		<div class="flex flex-col gap-4 lg:flex-row lg:gap-8">
+			<div
+				class="relative order-2 min-h-[300px] w-full overflow-hidden rounded-lg border border-slate-900/10 shadow-md md:min-h-[300px] lg:order-1 lg:min-h-0 lg:w-[50%]"
+			>
+				<!-- <img src="images/tambores.jpg" class="absolute h-full w-full object-cover" alt="" /> -->
+				<img src="images/fachada.jpg" class="absolute h-full w-full object-cover" alt="" />
 			</div>
 
 			<div
-				class="h-fit w-[50%] space-y-4 rounded-lg border border-slate-900/10 bg-white p-4 shadow-sm md:p-8"
+				class="order-1 h-fit w-full space-y-4 rounded-lg border border-slate-900/10 bg-white p-4 shadow-sm md:p-8 lg:order-2 lg:w-[50%]"
 			>
 				<h2 class="text-2xl font-light">El Espacio</h2>
 				<p>
@@ -50,9 +53,9 @@
 			</div>
 		</div>
 
-		<div class="flex gap-4 lg:gap-8">
+		<div class="flex flex-col gap-4 lg:flex-row lg:gap-8">
 			<div
-				class="h-fit w-[40%] space-y-4 rounded-lg border border-slate-900/10 bg-white p-4 shadow-sm md:p-8"
+				class="h-fit w-full space-y-4 rounded-lg border border-slate-900/10 bg-white p-4 shadow-sm md:p-8 lg:w-[40%]"
 			>
 				<!-- <h2 class="text-2xl font-light">¿Qué es?</h2> -->
 				<p>
@@ -64,9 +67,9 @@
 			</div>
 
 			<div
-				class="relative h-auto w-[60%] grow-0 overflow-hidden rounded-lg border border-slate-900/10 object-cover shadow-md"
+				class="relative h-auto min-h-[300px] w-full grow-0 overflow-hidden rounded-lg border border-slate-900/10 object-cover shadow-md lg:min-h-0 lg:w-[60%]"
 			>
-				<img src="images/taller-pintura.jpg" class="absolute h-full w-full object-cover" alt="" />
+				<img src="images/tambores.jpg" class="absolute h-full w-full object-cover" alt="" />
 			</div>
 		</div>
 	</div>
