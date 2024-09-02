@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="absolute left-0 top-0 h-[400px] w-full overflow-hidden shadow-md md:left-[250px] md:w-[calc(100vw-250px)]"
+	class="absolute left-0 top-0 mt-[70px] h-[400px] w-full overflow-hidden shadow-md md:left-[250px] md:mt-0 md:w-[calc(100vw-250px)]"
 >
 	<img src={img} alt="Hall de Espacio CRA" class="h-full w-full object-cover object-center" />
 

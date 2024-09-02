@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="absolute left-0 top-0 h-[400px] w-full min-w-[100vw] max-w-[calc(100vw-250px)] overflow-hidden shadow-md md:left-[250px] md:min-w-0"
+	class="absolute left-0 top-0 mt-[70px] h-[400px] w-full min-w-[100vw] max-w-[calc(100vw-250px)] overflow-hidden shadow-md md:left-[250px] md:mt-0 md:min-w-0"
 >
 	<a
 		class="absolute right-5 top-5 z-50 hidden h-[30px] w-[30px] text-white opacity-0 transition hover:opacity-50 md:block"

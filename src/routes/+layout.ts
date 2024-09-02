@@ -47,7 +47,6 @@ export async function load() {
 	);
 
 	const json = await response.json();
-	console.log(json);
 
 	const events = json.data.map((event: any) => {
 		const date = new Date(event.attributes.Fecha)

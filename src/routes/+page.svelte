@@ -17,7 +17,7 @@
 	</div> -->
 
 	<!-- EVENTOS -->
-	<h2 class="mt-[350px] text-[2.4rem] font-thin md:mb-2 md:mt-[400px]">Próximos eventos</h2>
+	<h2 class="mt-[400px] text-[2.4rem] font-thin md:mb-2 md:mt-[400px]">Próximos eventos</h2>
 
 	<div class="grid w-full md:gap-4 lg:grid-cols-3 xl:gap-6">
 		<EventCard data={events[events.length - 1]} />
