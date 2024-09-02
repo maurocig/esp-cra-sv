@@ -7,7 +7,7 @@
 </BannerPages>
 
 <div class="mt-[400px]">
-	<h1 class="mb-4 text-[2.4rem] font-thin">Nosotros</h1>
+	<h1 class="mb-4 text-[2.4rem] font-thin">Nosotras</h1>
 
 	<div class="grid w-full gap-4 text-lg font-light tracking-wide lg:grid-cols-2 lg:gap-8">
 		<div class="h-full w-full overflow-hidden rounded-lg">
@@ -20,11 +20,14 @@
 			<p>
 				Susana Asuaga y Alicia Escardó gestionan la productora cultural CRA desde hace diez años.
 				Organizan eventos y festivales, en Montevideo y otros departamentos (Festival de Jazz,
-				Semana Negra, Noche de San Juan, Ferias del Libro, entre otros).
+				Semana Negra, Noche de San Juan, Ferias del Libro, Milongas de Febrero, 100 en 1 día, entre
+				otros).
 			</p>
 			<p>
-				En 2019 abrieron el Espacio de Creación y Arte CRA, ubicado en La Floresta, que ofrece
-				propuestas culturales y de entretenimiento para todas las edades.
+				En 2019 abrieron este espacio en La Floresta, para contar con un centro propio como sede
+				para ofrecer eventos y festivales culturales para todas las edades. En estos cinco años,
+				artistas de la música, el teatro, el stand-up, la literatura y otras ramas artísticas han
+				pasado por sus salas para ofrecer su arte al público.
 			</p>
 		</div>
 	</div>

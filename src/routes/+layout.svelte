@@ -14,7 +14,7 @@
 		{ name: 'Eventos', href: '/eventos' },
 		{ name: 'Actividades', href: '/actividades' },
 		{ name: 'El Espacio', href: '/espacio' },
-		{ name: 'Nosotros', href: '/nosotros' },
+		{ name: 'Nosotras', href: '/nosotros' },
 		{ name: 'Contacto', href: '/contacto' }
 	]}
 />
@@ -26,7 +26,7 @@
 			{ name: 'Eventos', href: '/eventos', icon: Ticket },
 			{ name: 'Actividades', href: '/actividades', icon: Palette },
 			{ name: 'El Espacio', href: '/espacio', icon: Building },
-			{ name: 'Nosotros', href: '/nosotros', icon: InfoIcon },
+			{ name: 'Nosotras', href: '/nosotros', icon: InfoIcon },
 			{ name: 'Contacto', href: '/contacto', icon: Mail }
 		]}
 	/>

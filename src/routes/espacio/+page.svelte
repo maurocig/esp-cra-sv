@@ -56,9 +56,9 @@
 			>
 				<!-- <h2 class="text-2xl font-light">¿Qué es?</h2> -->
 				<p>
-					Espacio CRA te recibe todos los días a partir de las <b>18 y 30</b>. Paseo de compras,
-					diseño y artesanías, cafetería, librería, talleres, charlas, música, teatro, y además, el
-					MAC, un gran mercado al aire libre. Un lugar único en la costa de oro para vivir el arte y
+					Espacio CRA te recibe de <strong>martes a domingo</strong> a partir de las
+					<strong>15h</strong>. Paseo de compras, diseño y artesanías, cafetería, librería,
+					talleres, charlas, música y teatro. Un lugar único en la costa de oro para vivir el arte y
 					la cultura durante todo el año. En el Edificio La Floresta, calle Argentina y 33.
 				</p>
 			</div>
