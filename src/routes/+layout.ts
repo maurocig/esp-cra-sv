@@ -1,3 +1,5 @@
+import type { Event } from '$lib/types';
+
 let activities = [
 	{
 		id: 1,
@@ -49,7 +51,8 @@ export async function load() {
 	const json = await response.json();
 
 	const events = json.data.map((event: any) => {
-		const date = new Date(event.attributes.Fecha)
+		const actualDate = new Date(event.attributes.Fecha);
+		const date = actualDate
 			.toLocaleDateString('es-uy', {
 				weekday: 'long',
 				month: 'long',
@@ -67,10 +70,21 @@ export async function load() {
 			time: event.attributes.Horario.slice(0, 5),
 			price: +event.attributes.Precio,
 			description: event.attributes.Descripcion,
-			color
+			color,
+			actualDate
 		};
 	});
 
+	const currentEvents = events.filter((event: Event) => {
+		const date = new Date(event.actualDate);
+		const today = new Date();
+		console.log(date, today);
+		return date > today;
+	});
+
+	const lastThreeEvents = currentEvents.slice(-3);
+
+	// fetch activities
 	const response2 = await fetch(
 		'https://strapi-production-c8d7.up.railway.app/api/actividades?populate=*',
 		{
@@ -82,7 +96,6 @@ export async function load() {
 	);
 
 	const json2 = await response2.json();
-	console.log(json2);
 
 	if (json2.data) {
 		const activities = json2.data.map((activity: any) => {
@@ -109,7 +122,9 @@ export async function load() {
 	}
 	return {
 		// events: events2,
+		currentEvents,
 		events,
-		activities: activities || []
+		activities: activities || [],
+		lastThreeEvents
 	};
 }

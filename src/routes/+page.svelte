@@ -6,7 +6,7 @@
 	import { ArrowRight, ChevronRight } from 'lucide-svelte';
 	import BannerHome from './BannerHome.svelte';
 
-	const { events, activities } = $page.data;
+	const { lastThreeEvents: events, activities } = $page.data;
 </script>
 
 <div class="flex w-full flex-col">
@@ -20,9 +20,20 @@
 	<h2 class="mt-[400px] text-[2.4rem] font-thin md:mb-2 md:mt-[400px]">Próximos eventos</h2>
 
 	<div class="grid w-full md:gap-4 lg:grid-cols-3 xl:gap-6">
-		<EventCard data={events[events.length - 1]} />
-		<EventCard data={events[events.length - 2]} />
-		<EventCard data={events[events.length - 3]} />
+		{#if events.length === 0}
+			<p
+				class="col-span-3 w-fit rounded-lg border-gray-900/10 bg-white px-6 py-4 text-lg font-light text-slate-600 shadow-md"
+			>
+				No hay eventos programados
+			</p>
+		{:else}
+			<!-- <EventCard data={events[events.length - 1]} />
+			<EventCard data={events[events.length - 2]} />
+			<EventCard data={events[events.length - 3]} /> -->
+			{#each events as event, index}
+				<EventCard data={event} />
+			{/each}
+		{/if}
 	</div>
 	<a
 		href="/eventos"

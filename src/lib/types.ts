@@ -8,5 +8,6 @@ export type Event = {
 	price: number;
 	description: string;
 	color: string;
+	actualDate: Date;
 	// link: string;
 };
