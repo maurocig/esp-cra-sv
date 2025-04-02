@@ -59,6 +59,9 @@ const config: Config = {
 			},
 			fontFamily: {
 				sans: [...fontFamily.sans]
+			},
+			dropShadow: {
+				'very-dark': '0 5px 5px rgba(0, 0, 0, 0.9)' // Customize the shadow
 			}
 		}
 	}

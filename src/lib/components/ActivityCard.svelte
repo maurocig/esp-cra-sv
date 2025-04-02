@@ -12,6 +12,7 @@
 		href: string;
 		date: string;
 		day: string;
+		day2: string;
 		time: string;
 		price: string;
 		description: string;
@@ -26,7 +27,7 @@
 		showDescription = false
 	} = $props();
 
-	const { label, img, href, date, day, time, price, description, id } = data as Activity;
+	const { label, img, href, date, day, day2, time, price, description, id } = data as Activity;
 </script>
 
 <a
@@ -57,13 +58,13 @@
 		</div>
 		<div class="font-light">
 			{#if showDescription}
-				<div class="ml-2 mt-2 hidden items-center gap-2 text-lg font-normal lg:flex">
+				<div class="ml-2 mt-2 flex items-center gap-2 text-lg font-normal">
 					{description}
 				</div>
 			{/if}
 			<div class="ml-2 mt-2 flex items-center gap-2">
 				<Calendar size={16} strokeWidth={2.5} />
-				<span class="">{day}</span>
+				<span class="">{day} {day2 && `y ${day2}`}</span>
 			</div>
 			<div class="ml-2 flex items-center gap-2">
 				<Clock size={16} strokeWidth={2.5} />

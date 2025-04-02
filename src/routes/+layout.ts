@@ -1,44 +1,9 @@
 import type { Event } from '$lib/types';
 
-let activities = [
-	{
-		id: 1,
-		label: 'Teatro',
-		img: '/images/teatro.jpg',
-		href: '/actividades/teatro',
-		day: 'Miércoles',
-		time: '20:00 Hs',
-		price: '$600',
-		description: 'Teatro para niveles Intermedio y Avanzados. Talleres dictados por Carmen Morán.'
-	},
-	{
-		id: 2,
-		label: 'Yoga integral',
-		img: '/images/yoga.jpg',
-		href: '/actividades/yoga',
-		day: 'Miércoles y Viernes',
-		time: '9:45 Hs',
-		price: '$600',
-		description:
-			'Para conectarnos con nuestro cuerpo, relajarnos, armonizar y trabajar la flexibilidad y el movimiento con esta disciplina milenaria. A cargo de Luciana Astengo.'
-	},
-	{
-		id: 3,
-		label: 'Karate do Shokotan',
-		img: '/images/karate.avif',
-		href: '/actividades/karate',
-		day: 'Martes y Jueves',
-		time: '20:00 Hs',
-		price: '$600',
-		description:
-			'Entrenamiento físico, autodefensa y crecimiento personal. A cargo de Stevens Prous.'
-	}
-];
-
 const colors = ['#818cf8', '#34d399', '#fde047', '#f87171'];
 
 export async function load() {
-	const response = await fetch(
+	const eventsData = await fetch(
 		'https://strapi-production-c8d7.up.railway.app/api/eventos?populate=*',
 		{
 			method: 'GET',
@@ -48,9 +13,9 @@ export async function load() {
 		}
 	);
 
-	const json = await response.json();
+	const eventsJson = await eventsData.json();
 
-	const events = json.data.map((event: any) => {
+	const events = eventsJson.data.map((event: any) => {
 		const actualDate = new Date(event.attributes.Fecha);
 		const date = actualDate
 			.toLocaleDateString('es-uy', {
@@ -85,7 +50,7 @@ export async function load() {
 	const lastThreeEvents = currentEvents.slice(-3);
 
 	// fetch activities
-	const response2 = await fetch(
+	const activitiesData = await fetch(
 		'https://strapi-production-c8d7.up.railway.app/api/actividades?populate=*',
 		{
 			method: 'GET',
@@ -95,10 +60,11 @@ export async function load() {
 		}
 	);
 
-	const json2 = await response2.json();
+	const activitiesJson = await activitiesData.json();
+	let activities = [];
 
-	if (json2.data) {
-		const activities = json2.data.map((activity: any) => {
+	if (activitiesJson.data) {
+		activities = activitiesJson.data.map((activity: any) => {
 			const date = new Date(activity.attributes.Fecha)
 				.toLocaleDateString('es-uy', {
 					weekday: 'long',
@@ -113,6 +79,7 @@ export async function load() {
 				img: activity.attributes.Imagen.data?.attributes.url || '',
 				href: `actividades/${activity.id}`,
 				day: activity.attributes.Dia,
+				day2: activity.attributes.Dia_2,
 				date,
 				time: activity.attributes.Horario.slice(0, 5) || null,
 				price: +activity.attributes.Precio,
@@ -124,7 +91,7 @@ export async function load() {
 		// events: events2,
 		currentEvents,
 		events,
-		activities: activities || [],
+		activities: activities.slice().reverse(),
 		lastThreeEvents
 	};
 }
