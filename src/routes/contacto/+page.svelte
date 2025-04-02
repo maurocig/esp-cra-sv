@@ -5,7 +5,7 @@
 	import ContactForm2 from './ContactForm2.svelte';
 	import GoogleMap from './GoogleMap.svelte';
 
-	export let data;
+	// export let data;
 
 	let width: number;
 </script>
@@ -32,10 +32,10 @@
 			<ContactInfo
 				parentClass="ml-4"
 				data={{
-					phone: '092837',
-					whatsapp: '23987',
-					address: 'Calle 22 y 15, Atlántida, Canelones',
-					email: 'ejemplo@gmail.com',
+					// phone: '092837',
+					whatsapp: '095 084 301',
+					address: 'Calle Treinta y Tres y República Argentina, La Floresta, Canelones',
+					email: 'craproductora@gmail.com',
 					hours: 'Lunes a viernes de 9 a 18hs'
 				}}
 			/>
