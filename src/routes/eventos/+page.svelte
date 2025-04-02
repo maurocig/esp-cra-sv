@@ -9,6 +9,10 @@
 	const colors = ['#f87171', '#34d399', '#818cf8', '#fde047'];
 </script>
 
+<svelte:head>
+	<title>Eventos | CRA</title>
+</svelte:head>
+
 <div class="w-full space-y-6">
 	<div>
 		<h1 class="text-[2.4rem] font-thin md:mb-2">Próximos eventos</h1>

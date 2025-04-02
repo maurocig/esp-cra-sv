@@ -2,6 +2,10 @@
 	import BannerPages from '$lib/components/BannerPages.svelte';
 </script>
 
+<svelte:head>
+	<title>El Espacio | CRA</title>
+</svelte:head>
+
 <BannerPages img="images/interior-cartel.jpg">
 	<!-- <h1 class="">El espacio</h1> -->
 </BannerPages>

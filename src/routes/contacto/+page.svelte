@@ -14,6 +14,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Contacto | CRA</title>
+</svelte:head>
+
 <div
 	class="mx-auto mt-8 flex h-full min-h-[calc(100vh-100px)] max-w-[1280px] flex-col gap-8 px-4 xl:px-0"
 >

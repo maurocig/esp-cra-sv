@@ -1,4 +1,4 @@
-<script>
+<script ript>
 	import { page } from '$app/stores';
 	import ActivityCard from '$lib/components/ActivityCard.svelte';
 	import EventCard from '$lib/components/EventCard.svelte';
@@ -8,6 +8,10 @@
 
 	const { lastThreeEvents: events, activities } = $page.data;
 </script>
+
+<svelte:head>
+	<title>Espacio CRA</title>
+</svelte:head>
 
 <div class="flex w-full flex-col">
 	<BannerHome />

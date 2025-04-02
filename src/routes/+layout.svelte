@@ -7,6 +7,10 @@
 	const { children } = $props();
 </script>
 
+<svelte:head>
+	<title>Espacio CRA</title>
+</svelte:head>
+
 <!-- <slot /> -->
 <Nav
 	links={[
