@@ -48,11 +48,15 @@
 			>
 				<h2 class="text-2xl font-light">El Espacio</h2>
 				<p>
-					Está ubicado en la calle Argentina y 33, en La Floresta, Canelones, y forma parte de un
-					edificio patrimonial, estilo artdeco marítimo, construido en los años 40. La belleza y
-					armonía de sus instalaciones, la iluminación, la amplitud de los espacios y la
-					versatilidad que ofrecen para las distintas actividades, lo hacen un lugar único en la
-					Costa de Oro.
+					Está ubicado en la calle <a
+						class="font-normal text-blue-500"
+						target="_blank"
+						href="https://www.google.com/maps/place/Espacio+CRA/@-34.7605418,-55.6801532,17z/data=!3m1!4b1!4m6!3m5!1s0x959ff72d8bdcd6ed:0x617abc058716d6be!8m2!3d-34.7605462!4d-55.6775729!16s%2Fg%2F11hdxpc6j_!5m2!1e4!1e2?entry=ttu&g_ep=EgoyMDI1MDMzMS4wIKXMDSoASAFQAw%3D%3D"
+						>Argentina y 33</a
+					>, en La Floresta, Canelones, y forma parte de un edificio patrimonial, estilo artdeco
+					marítimo, construido en los años 40. La belleza y armonía de sus instalaciones, la
+					iluminación, la amplitud de los espacios y la versatilidad que ofrecen para las distintas
+					actividades, lo hacen un lugar único en la Costa de Oro.
 				</p>
 			</div>
 		</div>

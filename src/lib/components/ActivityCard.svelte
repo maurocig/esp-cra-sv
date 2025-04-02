@@ -26,12 +26,10 @@
 		overlayClass = '',
 		showDescription = false
 	} = $props();
-
-	const { label, img, href, date, day, day2, time, price, description, id } = data as Activity;
 </script>
 
 <a
-	href="/actividades/{id}"
+	href="/actividades/{data.id}"
 	class={cn(
 		'duration-800 group relative z-30 flex min-h-[320px] flex-col overflow-hidden rounded-md border-0 opacity-85 transition duration-700 hover:opacity-100 md:flex-row lg:min-h-[400px]',
 		parentClass
@@ -39,7 +37,7 @@
 >
 	<div class={cn('h-[60%] w-full overflow-hidden md:h-full ', imageClass)}>
 		<img
-			src={img}
+			src={data.img}
 			alt="Evento 2"
 			class="absolute h-full w-full object-cover object-center transition duration-[8000ms] ease-in-out group-hover:scale-125"
 		/>
@@ -53,22 +51,22 @@
 		)}
 	>
 		<div>
-			<span class="text-2xl font-semibold xl:text-4xl">{label}</span>
+			<span class="text-2xl font-semibold xl:text-3xl">{data.label}</span>
 			<!-- <p class="mb-4 mt-2">{description}</p> -->
 		</div>
 		<div class="font-light">
 			{#if showDescription}
 				<div class="ml-2 mt-2 flex items-center gap-2 text-lg font-normal">
-					{description}
+					{data.description}
 				</div>
 			{/if}
 			<div class="ml-2 mt-2 flex items-center gap-2">
 				<Calendar size={16} strokeWidth={2.5} />
-				<span class="">{day} {day2 && `y ${day2}`}</span>
+				<span class="">{data.day} {data.day2 && `y ${data.day2}`}</span>
 			</div>
 			<div class="ml-2 flex items-center gap-2">
 				<Clock size={16} strokeWidth={2.5} />
-				<span class="">{time}</span>
+				<span class="">{data.time}</span>
 			</div>
 			<!-- <div class="ml-2 hidden items-center gap-2 xl:flex">
 				<Ticket size={16} strokeWidth={2.5} />
