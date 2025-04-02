@@ -30,10 +30,12 @@
 	const { label, img, href, date, day, day2, time, price, description, id } = data as Activity;
 </script>
 
+<!-- Tengo que crear un componente nuevo porque sin el data-sveltekit-reload el link no funciona. ??? además con este método se demora la carga de la pagina.  -->
 <a
+	data-sveltekit-reload
 	href="/actividades/{id}"
 	class={cn(
-		'duration-800 group relative z-30 flex min-h-[320px] flex-col overflow-hidden rounded-md border-0 opacity-85 transition duration-700 hover:opacity-100 md:flex-row lg:min-h-[400px]',
+		'duration-800 group relative z-30 flex min-h-[400px] flex-col overflow-hidden rounded-md border-0 opacity-85 transition duration-700 hover:opacity-100 md:flex-row',
 		parentClass
 	)}
 >
@@ -48,7 +50,7 @@
 	<!-- overlay -->
 	<div
 		class={cn(
-			'absolute bottom-0 flex w-full flex-col justify-between bg-gradient-to-t from-white/60 to-white/30 p-4 shadow-sm backdrop-blur-md transition duration-700 group-hover:shadow-md md:w-full lg:p-6',
+			'absolute bottom-0 flex min-h-[40%] w-full flex-col justify-between bg-gradient-to-t from-white/60 to-white/30 p-4 shadow-sm backdrop-blur-md transition duration-700 group-hover:shadow-md md:w-full lg:p-6',
 			overlayClass
 		)}
 	>
@@ -70,10 +72,6 @@
 				<Clock size={16} strokeWidth={2.5} />
 				<span class="">{time}</span>
 			</div>
-			<!-- <div class="ml-2 hidden items-center gap-2 xl:flex">
-				<Ticket size={16} strokeWidth={2.5} />
-				<span class="">{price}</span>
-			</div> -->
 		</div>
 	</div>
 </a>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import ActivityCard from '$lib/components/ActivityCard.svelte';
+	import { ArrowRight } from 'lucide-svelte';
 
 	const { activities } = $page.data;
 </script>
