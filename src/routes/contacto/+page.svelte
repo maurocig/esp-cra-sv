@@ -8,10 +8,6 @@
 	export let data;
 
 	let width: number;
-
-	onMount(() => {
-		document.title = 'Contacto - CEPIA';
-	});
 </script>
 
 <svelte:head>
